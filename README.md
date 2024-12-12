@@ -75,10 +75,10 @@ spi = SPI()
 Calculate the 1-Month SPI using Gamma function and L-moments. You must indicate the date column and the 
 precipitation column of the DataFrame. You can have a list of precipitation columns to process.
 ```
-df_spi = new_spi.calculate(
+df_spi = spi.calculate(
     rainfall_data, 
     'date', 
-    'precip', 
+    'TotalPrecipitation', 
     freq="M", 
     scale=1, 
     fit_type="lmom", 
@@ -89,10 +89,10 @@ df_spi = new_spi.calculate(
 Calculate the 3-Month SPI using Gamma function and L-moments. You must indicate the date column and the 
 precipitation column of the DataFrame. You can have a list of precipitation columns to process.
 ```
-df_spi = new_spi.calculate(
+df_spi = spi.calculate(
     rainfall_data, 
     'date', 
-    'precip', 
+    'TotalPrecipitation', 
     freq="M", 
     scale=3, 
     fit_type="lmom", 
@@ -106,7 +106,7 @@ be calculated using the integer grouping in the freq_col.
 
 Plot data
 ```
-fig = plot_index(df_spi, 'date', 'precip_scale_3_calculated_index')
+fig = plot_index(df_spi, 'date', 'TotalPrecipitation_scale_3_calculated_index')
 ```
 
 ## TO DO
